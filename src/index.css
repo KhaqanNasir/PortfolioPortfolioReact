@@ -1,0 +1,12 @@
+@font-face {
+  font-family: gilroy;
+  src: url('./Gilroy-Light.otf');
+}
+*{
+  color: hsl(0, 10%, 88%);
+  font-family: gilroy;
+}
+
+body{
+  background-color:hsl(0, 2%, 9%);
+}

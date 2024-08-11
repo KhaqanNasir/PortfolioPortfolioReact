@@ -1,0 +1,23 @@
+@media (max-width: 1200px) {
+  .row {
+    flex-direction: column;
+  }
+  .col-3, .col-9 {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  
+}
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  background-color: black;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb{
+ border-radius: 20px;
+  background-color: grey;
+}
+

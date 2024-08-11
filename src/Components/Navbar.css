@@ -1,0 +1,35 @@
+.nav-items {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: hsla(0, 3%, 25%, 0.485);
+  padding: 20px;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center; 
+  width: 100%;
+}
+
+.nav-items li {
+  list-style-type: none;
+}
+
+.nav-items li a {
+  text-decoration: none;
+  margin: 0px 22px;
+  color: hsl(0, 22%, 93%);
+  font-size: 1.2rem;
+}
+
+.nav-items li a:hover {
+  color: hsl(54, 100%, 50%);
+}
+
+.nav-items li a.active {
+  color: hsl(54, 100%, 50%);
+}
+
+@media (max-width:773px) {
+  .nav-items{
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,72 @@
+.resume-edu {
+  display: inline-flex;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.resume-edu img {
+  height: 30px;
+  margin-left: 10px;
+}
+
+.resume-box {
+  padding: 20px;
+  position: relative;
+}
+
+.edu-name {
+  font-size: 1.3rem;
+  color: lightblue;
+}
+
+.edu-duration {
+  font-size: 1rem;
+  color: hsl(54, 53%, 38%);
+}
+
+.edu-abt {
+  font-size: 1rem;
+}
+
+.rem {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.rem::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  bottom: 0;
+  width: 1px;
+  background: hsl(0, 22%, 93%);
+}
+
+.resume-box::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 20px;
+  width: 15px;
+  height: 15px;
+  background-color: hsl(54, 53%, 38%);
+  border-radius: 50%;
+  border: 2px solid hsl(0, 3%, 14%);
+}
+
+.skillsBox{
+  width: 100%;
+  background-color: hsla(0, 3%, 25%, 0.485);
+  border-radius: 20px;
+  padding: 20px;
+  border-right: 1px solid grey;
+  border-bottom: 2px solid grey;
+  font-size: 1.3rem;
+}
+
+
+.progress{
+  margin-bottom: 10px;
+}

@@ -1,0 +1,78 @@
+.background {
+  background-color: #252323;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.about-name {
+  font-size: 2.5rem;
+  font-weight: 1000;
+  padding: 1rem 0 0 1rem ;
+  font-family:Courier;
+}
+
+.about-hz {
+  margin-left: 1rem;
+  width: 60px;
+  height: 4px;
+  border: none;  
+  border-radius: 10px; 
+  background-color: hsl(54, 100%, 50%);
+}
+
+.about-para {
+  font-size: 1.2rem;
+}
+
+.about-doing {
+  
+  font-size: 1.8rem;
+  border-bottom: 1px solid rgba(162, 158, 158, 0.642);
+}
+
+.about-work {
+  max-width: 45%;
+  height: 130px;
+  background-color: hsla(0, 4%, 19%, 0.485);
+  border-radius: 20px;
+  margin: 2%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid grey;
+  border-bottom: 2px solid grey;
+}
+.about-work:hover{
+  opacity: 0.5;
+  transform: translateY(-3px);
+  transition: 0.1s ease-in-out;
+}
+
+.about-work-img {
+  height: 40px;
+  margin: 20px;
+}
+
+.about-work-p1 {
+  font-size: 1.5rem;
+  font-weight: 1000;
+  color: lightblue;
+}
+
+.about-work-p2 {
+  font-size: 1rem;
+}
+
+@media (max-width: 1000px) {
+  .about-work {
+    max-width: 100%;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-work-img {
+    margin: 20px auto;
+  }
+}

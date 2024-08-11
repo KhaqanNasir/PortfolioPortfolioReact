@@ -1,0 +1,30 @@
+.card {
+  background-color: hsla(0, 3%, 25%, 0.485);
+  margin: auto;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+
+}
+
+.card-title {
+  color: gray;
+  font-size: 1.3rem;
+  font-weight: 1000;
+}
+
+.card-muted {
+  color: gray;
+}
+
+.certificates {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+img:hover{
+  opacity: 0.5;
+  transition: 0.1s all ease-in-out;
+}

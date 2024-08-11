@@ -1,0 +1,46 @@
+const portfolioData = [
+  { id: 1,
+    image:"/certificates/OCHIClone.png",
+    title:"Ochi.Design Clone",
+    catogery:"React JS",
+    link:"/certificates/OCHIClone.png",
+    projectLink:"https://drive.google.com/file/d/1zpUZe9Z0jluPIcNvWDrrhJVROGJnK0lm/view?usp=drive_link",
+   },
+  {
+ id: 2,
+ image:"/certificates/CurrentPortfolio.png",
+ title:"Personal Portfolio",
+ catogery:"React JS",
+ link:"/certificates/CurrentPortfolio.png",
+ projectLink:"https://khaqannasir.netlify.app/",
+},
+{
+  id: 3,
+  image:"/certificates/Portfolio.png",
+  title:"Portfolio Website",
+  catogery:"HTML, CSS, Javascript, Bootstrap",
+  link:"https://github.com/KhaqanNasir/Personal-Portfolio",
+},
+{
+  id: 4,
+  image:"/certificates/Calculator.png",
+  title:"Calculator Clone",
+  catogery:"HTML, CSS, Javascript",
+  link:"https://github.com/KhaqanNasir/Calculator",
+ },
+ {
+   id: 5,
+   image:"/certificates/CGPA.png",
+   title:"CGPA Calculator",
+   catogery:"C# WinForms",
+   link:"https://github.com/KhaqanNasir/COMSATS-CGPA-Calculator",
+ },
+{
+  id: 6,
+  image:"/certificates/UniPortal.png",
+  title:"FrontEnd University Portal",
+  catogery:"Java GUI",
+  link:"https://github.com/KhaqanNasir/University-Management-System",
+},
+]
+export default portfolioData;

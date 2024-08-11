@@ -1,0 +1,122 @@
+
+.completeBG {
+  background-color: hsl(0, 3%, 14%);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+
+.image {
+  width: 120px;
+  margin: 20px 0;
+}
+
+.bodyName {
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.bodyWork {
+  font-size: 1.1rem;
+  background-color: hsla(0, 3%, 25%, 0.485);
+  padding: 6px;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 5px 14px;
+  margin-bottom: 20px;
+}
+
+.horizontalLine {
+  color: hsl(0, 22%, 93%);
+  width: 80%;
+}
+
+.data {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.dataText {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.emailHeading {
+  font-size: 0.8rem;
+}
+
+.emaildata {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.iconsBody {
+  background-color: hsl(0, 3%, 18%);
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 20px;
+  width: 40px;
+}
+
+.bodyIcons a img {
+  padding-inline: 15px;
+  height: 35px;
+}
+
+.bodyIcons a{
+  transition: opacity 0.2s ease-in-out;
+}
+
+.bodyIcons a:hover{
+  opacity: 0.5;
+}
+/* Responsive design for mobile view */
+@media (max-width: 768px) {
+  .completeBG {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .image {
+    width: 100px;
+    margin: 10px 0;
+  }
+
+  .bodyName {
+    font-size: 1.5rem;
+  }
+
+  .bodyWork {
+    font-size: 1rem;
+    padding: 4px 10px;
+  }
+
+  .horizontalLine {
+    width: 100%;
+  }
+
+  .data {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .iconsBody {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .emailHeading, .emaildata {
+    text-align: center;
+  }
+}

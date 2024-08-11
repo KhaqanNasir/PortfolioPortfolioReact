@@ -1,0 +1,38 @@
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  margin-top: 40px;
+}
+
+.box a img {
+  border-radius: 20px;
+  width: 100%;
+  max-width: 270px;
+  min-height: 200px;
+}
+.box a img:hover,
+.box a img.hovered {
+  opacity: 0.5;
+  transition: 0.1s all ease-in-out;
+}
+
+
+
+.portfolio-heading {
+  font-size: 1.2rem;
+  padding-top: 5px;
+}
+
+.project-type {
+  color: gray;
+  font-size: 1rem;
+}
