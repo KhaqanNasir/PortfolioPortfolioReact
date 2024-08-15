@@ -26,7 +26,7 @@ function App() {
   return (
     <div data-scroll-container>
       <br />
-      <div className="container" data-scroll data-scroll-speed={5}>
+      <div className="container" data-scroll data-scroll-speed={1}>
         <Router>
           <div className="row">
             <div className="col-3">
