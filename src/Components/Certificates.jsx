@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from "react";
 import "./Certificates.css";
 import CertificateData from "./certificateData.jsx";
 import data from "./certificatesAPI.jsx";
-import Navbar from './Navbar.jsx';
+import Navbar from "./Navbar.jsx";
 
 const Certificates = () => {
   const [cerData, setCerData] = useState(data);
   useEffect(() => {
     document.title = "Portfolio | Certificates";
-  }, []); 
+  }, []);
   return (
     <div className="container">
       <div className="row">
