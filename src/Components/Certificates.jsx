@@ -6,6 +6,9 @@ import Navbar from './Navbar.jsx';
 
 const Certificates = () => {
   const [cerData, setCerData] = useState(data);
+  useEffect(() => {
+    document.title = "Portfolio | Certificates";
+  }, []); 
   return (
     <div className="container">
       <div className="row">

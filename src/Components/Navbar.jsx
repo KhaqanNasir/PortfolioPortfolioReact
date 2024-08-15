@@ -7,8 +7,8 @@ const Navbar = () => {
   useGSAP(()=>{
     gsap.from(".nav-items li" , {
       opacity:0,
-      stagger:0.3,
-      duration:0.8,
+      stagger:0.2,
+      duration:0.7,
       x:50
     })
   })

@@ -2,7 +2,11 @@ import React from 'react';
 import "./Contact.css";
 import Navbar from './Navbar';
 const Contact = () => {
+  useEffect(() => {
+    document.title = "Portfolio | Contact";
+  }, []); 
   return (
+
     <>
       <div className="container">
         <div className="row">

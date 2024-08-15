@@ -10,7 +10,7 @@
 }
 
 .resume-box {
-  padding: 20px;
+  padding: 0px 20px;
   position: relative;
 }
 
@@ -48,7 +48,6 @@
   content: "";
   position: absolute;
   left: -7px;
-  top: 20px;
   width: 15px;
   height: 15px;
   background-color: hsl(54, 53%, 38%);
