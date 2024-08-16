@@ -18,6 +18,10 @@
 }
 ::-webkit-scrollbar-thumb{
  border-radius: 20px;
-  background-color: grey;
+ background-color: hsl(54, 53%, 38%);
+}
+
+.container-fluid{
+  padding: 1rem;
 }
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./Info.css";
 import bodyImage from "../Components/images/BodyImage.png";
 import emailImage from "../Components/images/emailIcon.png";
@@ -10,29 +10,17 @@ import github from "../Components/images/github.png";
 import instagram from "../Components/images/instagram.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+
 function Info() {
+  const buttonRef = useRef(null);
+  const [mode, setMode] = useState(true);
+
   useGSAP(() => {
-    var tl = gsap.timeline();
+    const tl = gsap.timeline();
 
-    tl.from(".image", {
-      y: -40,
-      duration: 0.6,
-      opacity: 0,
-    });
-
-    tl.from(".bodyName, .bodyWork", {
-      y: 40,
-      duration: 0.7,
-      opacity: 0,
-    });
-
-    tl.from(".data", {
-      x: -50,
-      duration: 0.4,
-      stagger: 0.2,
-      opacity: 0,
-    });
-
+    tl.from(".image", { y: -50, duration: 0.6, opacity: 0 });
+    tl.from(".bodyName, .bodyWork", { y: 40, duration: 0.7, opacity: 0 });
+    tl.from(".data", { x: -50, duration: 0.4, stagger: 0.2, opacity: 0 });
     tl.from(".bodyIcons a img", {
       opacity: 0,
       duration: 0.3,
@@ -47,11 +35,7 @@ function Info() {
         <div className="container">
           <div className="row">
             <div className="completeBG col-12">
-              <img
-                src={bodyImage}
-                className="image img-fluid shadow"
-                alt="Profile"
-              />
+              <img src={bodyImage} className="image img-fluid" alt="Profile" />
               <p className="bodyName">Muhammad Khaqan Nasir</p>
               <h1 className="bodyWork shadow">Computer Scientist</h1>
               <hr className="horizontalLine" />

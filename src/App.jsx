@@ -1,8 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Info from "./Components/Info";
 import Resume from "./Components/Resume";
 import Portfolio from "./Components/Portfolio";
@@ -10,14 +6,14 @@ import Certificates from "./Components/Certificates";
 import Contact from "./Components/Contact";
 import About from "./Components/About";
 import "./App.css";
-import LocomotiveScroll from 'locomotive-scroll';
+import LocomotiveScroll from "locomotive-scroll";
 import { useEffect } from "react";
 const locomotiveScroll = new LocomotiveScroll();
 
 function App() {
   useEffect(() => {
     const locomotiveScroll = new LocomotiveScroll({
-      el: document.querySelector('[data-scroll-container]'),
+      el: document.querySelector("[data-scroll-container]"),
       smooth: true,
     });
 
@@ -25,8 +21,7 @@ function App() {
   }, []);
   return (
     <div data-scroll-container>
-      <br />
-      <div className="container" data-scroll data-scroll-speed={1}>
+      <div className="container-fluid" data-scroll data-scroll-speed={0.5}>
         <Router>
           <div className="row">
             <div className="col-3">
@@ -44,9 +39,8 @@ function App() {
           </div>
         </Router>
       </div>
-      
     </div>
-  )
+  );
 }
 
 export default App;

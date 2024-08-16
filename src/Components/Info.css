@@ -1,6 +1,6 @@
 
 .completeBG {
-  background-color: hsl(0, 3%, 14%);
+  background-color: #252323;
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -10,9 +10,14 @@
   flex-direction: column;
 }
 
+.themebtn{
+  background: transparent;
+  border-radius: 50%;
+}
+
 
 .image {
-  width: 120px;
+  width: 150px;
   margin: 20px 0;
 }
 
