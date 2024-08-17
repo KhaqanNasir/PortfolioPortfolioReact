@@ -35,7 +35,7 @@ function Info() {
         <div className="container">
           <div className="row">
             <div className="completeBG col-12">
-              <img src={bodyImage} className="image img-fluid" alt="Profile" />
+              <img src={bodyImage} className="image" alt="ProfilePic" />
               <p className="bodyName">Muhammad Khaqan Nasir</p>
               <h1 className="bodyWork shadow">Computer Scientist</h1>
               <hr className="horizontalLine" />
