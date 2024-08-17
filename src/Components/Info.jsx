@@ -18,7 +18,7 @@ function Info() {
   useGSAP(() => {
     const tl = gsap.timeline();
 
-    tl.from(".image", { y: -50, duration: 0.6, opacity: 0 });
+    tl.from(".image", { duration: 0.6, opacity: 0 });
     tl.from(".bodyName, .bodyWork", { y: 40, duration: 0.7, opacity: 0 });
     tl.from(".data", { x: -50, duration: 0.4, stagger: 0.2, opacity: 0 });
     tl.from(".bodyIcons a img", {
