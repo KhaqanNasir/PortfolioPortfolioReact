@@ -15,7 +15,10 @@ const Certificates = () => {
         <div className="background">
           <Navbar />
           <div>
-            <p className="about-name">Certificates</p>
+            <div className="blurtext">
+              Certificates
+              <p className="about-name ">Certificates</p>
+            </div>
             <hr className="about-hz"></hr>
           </div>
           <div className="container">

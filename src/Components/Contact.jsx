@@ -1,10 +1,65 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "./Contact.css";
 import Navbar from "./Navbar";
+import Swal from "sweetalert2";
+
 const Contact = () => {
+  const fullNameRef = useRef(null);
+  const emailRef = useRef(null);
+  const phoneRef = useRef(null);
+  const subjectRef = useRef(null);
+  const messageRef = useRef(null);
+
   useEffect(() => {
     document.title = "Portfolio | Contact";
+    const script = document.createElement("script");
+    script.src = "https://smtpjs.com/v3/smtp.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
   }, []);
+
+  const sendEmail = () => {
+    const bodyMessage = `
+      Name : ${fullNameRef.current.value} <br />
+      Email : ${emailRef.current.value} <br />
+      Phone : ${phoneRef.current.value} <br />
+      Message : ${messageRef.current.value}
+    `;
+
+    window.Email.send({
+      Host: "smtp.elasticemail.com",
+      Username: "khaqannasir01@gmail.com",
+      Password: "512F7413008A4594C1862C3B8BF6A5CA0BB3",
+      To: "khaqannasir01@gmail.com",
+      From: "khaqannasir01@gmail.com",
+      Subject: subjectRef.current.value,
+      Body: bodyMessage,
+    }).then((message) => {
+      if (message === "OK") {
+        Swal.fire({
+          title: "Success!",
+          text: "Message Sent Successfully!",
+          icon: "success",
+        });
+      } else {
+        Swal.fire({
+          title: "Error!",
+          text: "Failed to send the message.",
+          icon: "error",
+        });
+      }
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    sendEmail();
+  };
+
   return (
     <>
       <div className="container">
@@ -12,9 +67,58 @@ const Contact = () => {
           <div className="contact background">
             <Navbar />
             <div>
-              <p className="about-name">Contact</p>
+              <div className="blurtext">
+                Contact
+                <p className="about-name ">Contact</p>
+              </div>
               <hr className="about-hz"></hr>
             </div>
+
+            <form onSubmit={handleSubmit}>
+              <input
+                type="text"
+                placeholder="Full Name"
+                autoComplete="off"
+                id="FullName"
+                ref={fullNameRef}
+              />
+
+              <input
+                type="text"
+                placeholder="Email Address"
+                autoComplete="off"
+                id="Email"
+                ref={emailRef}
+              />
+
+              <input
+                type="text"
+                placeholder="Phone Number"
+                autoComplete="off"
+                id="phone"
+                ref={phoneRef}
+              />
+
+              <input
+                type="text"
+                placeholder="Subject"
+                autoComplete="off"
+                id="Subject"
+                ref={subjectRef}
+              />
+
+              <textarea
+                placeholder="Message"
+                autoComplete="off"
+                id="Message"
+                rows="4"
+                cols="50"
+                ref={messageRef}
+              />
+
+              <button type="Submit">Send Message</button>
+            </form>
+
             <div className="map">
               <iframe
                 className="shadow-lg"
@@ -24,9 +128,9 @@ const Contact = () => {
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
-            <br></br>
+            <br />
             <p className="about-doing">Send me a Mail</p>
-            <div class="emailSend">
+            <div className="emailSend">
               <a
                 href="mailto:khaqannasir01@gmail.com"
                 target="_blank"

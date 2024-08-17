@@ -15,7 +15,10 @@ const Resume = () => {
           <div className="background">
             <Navbar />
             <div>
-              <p className="about-name">Resume</p>
+              <div className="blurtext">
+                Resume
+                <p className="about-name ">Resume</p>
+              </div>
               <hr className="about-hz"></hr>
             </div>
 

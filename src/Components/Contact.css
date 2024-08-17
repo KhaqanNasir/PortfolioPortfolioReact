@@ -1,3 +1,58 @@
+form{
+  text-align: center;
+}
+form input{
+  height: 3.5rem;
+  width: 40%;
+  background-color: transparent;
+  font-size: 1.1rem;
+  font-weight: 1000;
+  border: 1px solid rgba(255, 255, 255, 0.312);
+  margin: 1rem;
+  border-radius: 5px;
+  padding: 1rem;
+  letter-spacing: 1px;
+}
+
+form textarea{
+  width: 83%;
+  background-color: transparent;
+  font-size: 1.1rem;
+  font-weight: 1000;
+  border: 1px solid rgba(255, 255, 255, 0.312);
+  margin: 1rem;
+  border-radius: 5px;
+  padding: 1rem;
+  resize: none;
+  letter-spacing: 1px;
+}
+
+form button{
+  background-color: hsl(54, 53%, 38%);
+  font-size: 1.2rem;
+  font-weight: 1000;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  border: none;
+  transition: opacity 0.1s ease-in-out;
+  &:hover{
+    opacity: 0.5;
+  }
+}
+
+
+
+@media (max-width:800px) {
+  
+  form input{
+    width: 83%;
+  }
+  form textarea{
+    width: 83%;
+  }
+}
+
 .map {
   display: flex;
   justify-content: center;
@@ -9,7 +64,7 @@
 
 .map iframe {
   border-radius: 20px;
-  width: 100%; 
+  width: 83%; 
   height: 50vh;  
 }
 

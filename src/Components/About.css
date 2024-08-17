@@ -4,16 +4,26 @@
   padding: 30px;
 }
 
+.blurtext{
+  position: relative;
+  font-size: 4rem;
+  color: rgba(86, 86, 80, 0.378);
+  font-weight: 1000;
+  text-wrap: nowrap;
+}
 .about-name {
-  font-size: 2.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 2rem;
   font-weight: 1000;
   padding: 1rem 0 0 1rem ;
-  font-family:Courier;
 }
 
 .about-hz {
+  margin-top: -0.7rem;
   margin-left: 1rem;
-  width: 60px;
+  width: 100px;
   height: 4px;
   border: none;  
   border-radius: 10px; 
@@ -21,7 +31,7 @@
 }
 
 .about-para {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .about-doing {

@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import "./Portfolio.css";
 import portfolioAPI from "./PortfolioAPI.jsx";
-import PortfolioData from './PortfolioData.jsx';
-import Navbar from './Navbar.jsx';
+import PortfolioData from "./PortfolioData.jsx";
+import Navbar from "./Navbar.jsx";
 
 const Portfolio = () => {
   const [portfolio, setPortfolio] = useState(portfolioAPI);
 
   useEffect(() => {
     document.title = "Portfolio | Projects";
-  }, []); 
+  }, []);
 
   return (
     <>
@@ -18,8 +18,11 @@ const Portfolio = () => {
           <div className="background">
             <Navbar />
             <div>
-              <p className="about-name">Portfolio</p>
-              <hr className="about-hz" />
+              <div className="blurtext">
+                Portfolio
+                <p className="about-name ">Portfolio</p>
+              </div>
+              <hr className="about-hz"></hr>
             </div>
             <div className="portfolio col-12">
               <PortfolioData portfolio={portfolio} />
@@ -29,6 +32,6 @@ const Portfolio = () => {
       </div>
     </>
   );
-}
+};
 
 export default Portfolio;

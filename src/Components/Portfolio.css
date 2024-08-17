@@ -20,12 +20,14 @@
   width: 100%;
   max-width: 300px;
   min-height: 200px;
+  transition: all 0.1s ease-in-out;
+  &:hover{
+    transform: scale(0.94);
+    opacity: 0.5;
+  }
+
 }
-.box a img:hover,
-.box a img.hovered {
-  opacity: 0.5;
-  transition: 0.1s all ease-in-out;
-}
+
 
 
 
