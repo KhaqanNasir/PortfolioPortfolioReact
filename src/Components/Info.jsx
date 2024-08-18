@@ -31,13 +31,13 @@ function Info() {
 
   return (
     <>
-      <div className="final">
+      <section className="final">
         <div className="container">
           <div className="row">
             <div className="completeBG col-12">
-              <img src={bodyImage} className="image" alt="ProfilePic" />
+              <img src={bodyImage} className="image" alt="Profile Picture" />
               <p className="bodyName">Muhammad Khaqan Nasir</p>
-              <h1 className="bodyWork shadow">Computer Scientist</h1>
+              <h1 className="bodyWork shadow">Software Engineer</h1>
               <hr className="horizontalLine" />
               <div className="left">
                 <div className="data">
@@ -49,9 +49,8 @@ function Info() {
                     />
                   </div>
                   <div>
-                    <span className="emailHeading">EMAIL</span>
-                    <br />
-                    <span className="emaildata">khaqannasir01@gmail.com</span>
+                    <h2 className="emailHeading">Email</h2>
+                    <p className="emaildata">khaqannasir01@gmail.com</p>
                   </div>
                 </div>
                 <div className="data">
@@ -63,9 +62,8 @@ function Info() {
                     />
                   </div>
                   <div>
-                    <span className="emailHeading">PHONE</span>
-                    <br />
-                    <span className="emaildata">+92 309 1111977</span>
+                    <h2 className="emailHeading">Phone</h2>
+                    <p className="emaildata">+92 309 1111977</p>
                   </div>
                 </div>
                 <div className="data">
@@ -77,8 +75,8 @@ function Info() {
                     />
                   </div>
                   <div className="dataText">
-                    <span className="emailHeading">BIRTHDAY</span>
-                    <span className="emaildata">January 09, 2004</span>
+                    <h2 className="emailHeading">Birthday</h2>
+                    <p className="emaildata">January 09, 2004</p>
                   </div>
                 </div>
                 <div className="data">
@@ -90,34 +88,39 @@ function Info() {
                     />
                   </div>
                   <div>
-                    <span className="emailHeading">LOCATION</span>
-                    <br />
-                    <span className="emaildata">Okara, Pakistan</span>
+                    <h2 className="emailHeading">Location</h2>
+                    <p className="emaildata">Okara, Pakistan</p>
                   </div>
                 </div>
               </div>
-              <span className="bodyIcons">
+              <div className="bodyIcons">
                 <a
                   href="https://www.linkedin.com/in/khaqan-nasir/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <img src={linkedin} alt="LinkedIn" />
+                  <img src={linkedin} alt="LinkedIn Profile" />
                 </a>
-                <a href="https://github.com/KhaqanNasir" target="_blank">
-                  <img src={github} alt="GitHub" />
+                <a
+                  href="https://github.com/KhaqanNasir"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={github} alt="GitHub Profile" />
                 </a>
                 <a
                   href="https://www.instagram.com/khaqannasir_"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <img src={instagram} alt="Instagram" />
+                  <img src={instagram} alt="Instagram Profile" />
                 </a>
-              </span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <br></br>
+      </section>
+      <br />
     </>
   );
 }

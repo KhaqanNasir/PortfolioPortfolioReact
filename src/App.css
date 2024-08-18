@@ -3,8 +3,7 @@
     flex-direction: column;
   }
   .col-3, .col-9 {
-    width: 100%;
-    max-width: 100%;
+    width: 100vw;
     flex: 0 0 100%;
   }
   

@@ -4,60 +4,37 @@ import Navbar from "./Navbar";
 import Swal from "sweetalert2";
 
 const Contact = () => {
-  const fullNameRef = useRef(null);
-  const emailRef = useRef(null);
-  const phoneRef = useRef(null);
-  const subjectRef = useRef(null);
-  const messageRef = useRef(null);
-
   useEffect(() => {
     document.title = "Portfolio | Contact";
-    const script = document.createElement("script");
-    script.src = "https://smtpjs.com/v3/smtp.js";
-    script.async = true;
-    document.body.appendChild(script);
 
-    return () => {
-      document.body.removeChild(script);
-    };
+    return () => {};
   }, []);
 
-  const sendEmail = () => {
-    const bodyMessage = `
-      Name : ${fullNameRef.current.value} <br />
-      Email : ${emailRef.current.value} <br />
-      Phone : ${phoneRef.current.value} <br />
-      Message : ${messageRef.current.value}
-    `;
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
 
-    window.Email.send({
-      Host: "smtp.elasticemail.com",
-      Username: "khaqannasir01@gmail.com",
-      Password: "512F7413008A4594C1862C3B8BF6A5CA0BB3",
-      To: "khaqannasir01@gmail.com",
-      From: "khaqannasir01@gmail.com",
-      Subject: subjectRef.current.value,
-      Body: bodyMessage,
-    }).then((message) => {
-      if (message === "OK") {
-        Swal.fire({
-          title: "Success!",
-          text: "Message Sent Successfully!",
-          icon: "success",
-        });
-      } else {
-        Swal.fire({
-          title: "Error!",
-          text: "Failed to send the message.",
-          icon: "error",
-        });
-      }
-    });
-  };
+    formData.append("access_key", "b61e096e-4a31-4caa-8b10-12aec9607539");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    sendEmail();
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    }).then((res) => res.json());
+
+    if (res.success) {
+      Swal.fire({
+        title: "Success!",
+        text: "Message Sent Successfully!",
+        icon: "success",
+      });
+    }
   };
 
   return (
@@ -74,51 +51,6 @@ const Contact = () => {
               <hr className="about-hz"></hr>
             </div>
 
-            <form onSubmit={handleSubmit}>
-              <input
-                type="text"
-                placeholder="Full Name"
-                autoComplete="off"
-                id="FullName"
-                ref={fullNameRef}
-              />
-
-              <input
-                type="text"
-                placeholder="Email Address"
-                autoComplete="off"
-                id="Email"
-                ref={emailRef}
-              />
-
-              <input
-                type="text"
-                placeholder="Phone Number"
-                autoComplete="off"
-                id="phone"
-                ref={phoneRef}
-              />
-
-              <input
-                type="text"
-                placeholder="Subject"
-                autoComplete="off"
-                id="Subject"
-                ref={subjectRef}
-              />
-
-              <textarea
-                placeholder="Message"
-                autoComplete="off"
-                id="Message"
-                rows="4"
-                cols="50"
-                ref={messageRef}
-              />
-
-              <button type="Submit">Send Message</button>
-            </form>
-
             <div className="map">
               <iframe
                 className="shadow-lg"
@@ -128,24 +60,60 @@ const Contact = () => {
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
+
             <br />
-            <p className="about-doing">Send me a Mail</p>
-            <div className="emailSend">
-              <a
-                href="mailto:khaqannasir01@gmail.com"
-                target="_blank"
-                className="mail"
-              >
-                Send Mail
-              </a>
-              <a
-                href="https://drive.google.com/file/d/17_YXOt_OYG-dygd2DQZOWgFOIAvX0J8Q/view?usp=sharing"
-                download
-                target="_blank"
-                className="mail"
-              >
-                Download CV
-              </a>
+            <p className="noborder">Contact Me</p>
+
+            <div className="formclr">
+              <form onSubmit={onSubmit}>
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  autoComplete="off"
+                  id="FullName"
+                  required
+                  name="name"
+                />
+
+                <input
+                  type="text"
+                  placeholder="Email Address"
+                  autoComplete="off"
+                  id="Email"
+                  required
+                  name="email"
+                />
+
+                <input
+                  type="text"
+                  placeholder="Phone Number"
+                  autoComplete="off"
+                  id="phone"
+                  required
+                  name="phone"
+                />
+
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  autoComplete="off"
+                  id="Subject"
+                  required
+                  name="subject"
+                />
+
+                <textarea
+                  placeholder="Message"
+                  autoComplete="off"
+                  id="Message"
+                  required
+                  rows="6"
+                  cols="50"
+                  name="message"
+                />
+
+                <button type="Submit">Send Message</button>
+              </form>
             </div>
           </div>
         </div>

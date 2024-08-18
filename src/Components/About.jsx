@@ -3,6 +3,7 @@ import webDesign from "../Components/images/webDesign.png";
 import webDevelopment from "../Components/images/webDevelopment.png";
 import "./About.css";
 import Navbar from "./Navbar";
+import "remixicon/fonts/remixicon.css";
 function About() {
   return (
     <>
@@ -35,7 +36,18 @@ function About() {
                 work with you and look forward to potential collaborations.
               </p>
             </div>
+            <br></br>
+            <a
+              href="https://drive.google.com/file/d/17_YXOt_OYG-dygd2DQZOWgFOIAvX0J8Q/view?usp=sharing"
+              download
+              target="_blank"
+              className="mail"
+            >
+              <i class="ri-download-line"></i>
+              &nbsp; Download CV
+            </a>
             <br />
+            <br></br>
 
             <div>
               <p className="about-doing ">What I'm Doing</p>

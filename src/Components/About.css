@@ -42,7 +42,7 @@
 
 .about-work {
   max-width: 45%;
-  height: 130px;
+  height: 150px;
   background-color: hsla(0, 4%, 19%, 0.485);
   border-radius: 20px;
   margin: 2%;
@@ -71,6 +71,25 @@
 
 .about-work-p2 {
   font-size: 1rem;
+}
+
+.mail{
+  background-color: hsl(54, 53%, 38%);
+  font-size: 1.2rem;
+  font-weight: 1000;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  letter-spacing: 2px;
+  border: none;
+  transition: opacity 0.1s ease-in-out;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover{
+    opacity: 0.5;
+  }
 }
 
 @media (max-width: 1000px) {

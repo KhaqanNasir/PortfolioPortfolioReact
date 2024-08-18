@@ -11,7 +11,7 @@ form input{
   margin: 1rem;
   border-radius: 5px;
   padding: 1rem;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 form textarea{
@@ -24,14 +24,14 @@ form textarea{
   border-radius: 5px;
   padding: 1rem;
   resize: none;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 form button{
   background-color: hsl(54, 53%, 38%);
   font-size: 1.2rem;
   font-weight: 1000;
-  padding: 0.5rem 1.2rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 20px;
   letter-spacing: 1px;
   border: none;
@@ -42,6 +42,12 @@ form button{
 }
 
 
+
+.noborder{
+  font-size: 2rem;
+  border-bottom: none;
+  font-weight: 100;
+}
 
 @media (max-width:800px) {
   
@@ -64,76 +70,7 @@ form button{
 
 .map iframe {
   border-radius: 20px;
-  width: 83%; 
+  width: 100%; 
   height: 50vh;  
 }
 
-.mail{
-  text-decoration: none;
-  color: hsl(0, 10%, 88%);
-  font-size: 1.2rem;
-  font-weight: 1000;
-  padding: 10px 20px;
-  margin: 20px;
-  text-align: center;
-}
-.emailSend{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.mail {
-  display: inline-block;
-  width: 180px;
-  height: 50px;
-  border-radius: 10px;
-  border: 1px solid hsl(0, 10%, 200%);
-  position: relative;
-  overflow: hidden;
-  transition: all 0.5s ease-in;
-  z-index: 1;
- }
- .mail:hover{
-  color: black;
- }
- 
- .mail::before,
- .mail::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 0;
-  height: 100%;
-  transform: skew(15deg);
-  transition: all 0.5s;
-  overflow: hidden;
-  z-index: -1;
- }
- 
- .mail::before {
-  left: -10px;
-  background: gray;
- }
- 
- .mail::after {
-  right: -10px;
-  background: rgb(82, 79, 79);
- }
- 
- .mail:hover::before,
- .mail:hover::after {
-  width: 58%;
- }
- 
- .mail:hover span {
-  color: hsl(0, 10%, 200%);
-  transition: 0.3s;
- }
- 
- .mail span {
-  color: hsl(0, 10%, 200%);
-  font-size: 18px;
-  transition: all 0.3s ease-in;
- }

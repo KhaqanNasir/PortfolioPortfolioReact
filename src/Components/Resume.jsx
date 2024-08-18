@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import "./Resume.css";
-import education from "./images/education.png";
-import experience from "./images/experience.png";
+import "remixicon/fonts/remixicon.css";
 import Navbar from "./Navbar.jsx";
 
 const Resume = () => {
@@ -23,8 +22,9 @@ const Resume = () => {
             </div>
 
             <span className="resume-edu">
-              <img src={education} alt="Education Icon" />
-              <p className="about-doing">Education</p>
+              <p className="noborder">
+                <i class="ri-graduation-cap-fill"></i> &nbsp;Education
+              </p>
             </span>
 
             <div className="rem">
@@ -67,8 +67,9 @@ const Resume = () => {
             </div>
 
             <span className="resume-edu">
-              <img src={experience} alt="Experience Icon" />
-              <p className="about-doing">Experience</p>
+              <p className="noborder">
+                <i class="ri-building-3-fill"></i> &nbsp;Experience
+              </p>
             </span>
 
             <div className="rem">
